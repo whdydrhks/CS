@@ -40,3 +40,23 @@ JVM은 스택 기반으로 동작하며, Java Byte Code를 OS에 맞게 해석 �
 
 </div>
 </details>
+
+<details>
+<summary>❓ Java에서 제공하는 원시 타입들에 무엇이 있고, 각각 몇 byte를 차지하나요?</summary>
+<div markdown="1">
+정수형 byte(1), short(2), int(4), long(8) 
+실수형 float(4), double(8)
+문자형 char(2) 
+논리형 boolean(1)이 있고, 해당 숫자만큼을 차지한다.
+
+</div>
+</details>
+
+<details>
+<summary>❓ 오버라이딩(Overriding)과 오버로딩(Overloading)에 대해 설명해주세요.</summary>
+<div markdown="1">
+<h4><span style="background-color: red; color: black;">오버라이딩(Overriding)</span></h4>은 상위 클래스에 있는 메소드를 하위 클래스에서 재정의 하는 것을 말하고,
+<h4><span style="background-color: blue; color: black;">오버로딩(Overloading)</span></h4>은 매개변수의 개수나 타입을 다르게 하여 같은 이름의 메소드를 여러 개 정의하는 것을 말합니다.
+
+</div>
+</details>
