@@ -63,7 +63,7 @@ dependencies {
 }
 ```
 
-```yml
+```yaml
 spring:
 	flyway:
 		enabled: true #flyway를 실행
