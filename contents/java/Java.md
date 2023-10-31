@@ -69,6 +69,5 @@ JVM은 스택 기반으로 동작하며, Java Byte Code를 OS에 맞게 해석 �
 
 특징으로는 <b><span style="color: #0080ff">캡슐화, 상속, 다형성, 추상화</span></b> 등이 있고, 
 모듈 재사용으로 확장 및 유지보수가 용이합니다.
-
 </div>
 </details>
