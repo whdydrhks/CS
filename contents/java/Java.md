@@ -133,7 +133,7 @@ JVM은 스택 기반으로 동작하며, Java Byte Code를 OS에 맞게 해석 �
 <summary>❓ <span style="color: #ff0000">추상 클래스</span>와 <span style="color: #0080ff">일반 클래스</span>의 차이점이 무엇인가요?</summary>
 <div markdown="1">
 
-<b>객체화 가능 여부 <br>
+<b>객체화 가능 여부</b> <br>
 <span style="color: #ff0000">추상 클래스</span> <span style="color: #ff6666">불가</span><br>
 <span style="color: #0080ff">일반 클래스</span> <span style="color: #66b2ff"> 가능</span>
 
