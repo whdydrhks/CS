@@ -1,4 +1,4 @@
-<h2>${\rm{\color{#0000ff}Ja}}$va</h2>
+<p>${\rm{\color{#0000ff}Ja}}$</p>va
 
 <details>
 <summary>❓ 자바의 특징을 설명해주세요.</summary>
