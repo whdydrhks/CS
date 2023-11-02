@@ -44,10 +44,11 @@ JVM은 스택 기반으로 동작하며, Java Byte Code를 OS에 맞게 해석 �
 <details>
 <summary>❓ Java에서 제공하는 원시 타입들에 무엇이 있고, 각각 몇 byte를 차지하나요?</summary>
 <div markdown="1">
-정수형 byte(1), short(2), int(4), long(8) 
-실수형 float(4), double(8)
-문자형 char(2) 
-논리형 boolean(1)이 있고, 해당 숫자만큼을 차지한다.
+
+- 정수형 byte(1), short(2), int(4), long(8) 
+- 실수형 float(4), double(8)
+- 문자형 char(2) 
+- 논리형 boolean(1)이 있고, 해당 숫자만큼을 차지한다.
 
 </div>
 </details>
@@ -64,6 +65,7 @@ JVM은 스택 기반으로 동작하며, Java Byte Code를 OS에 맞게 해석 �
 <details>
 <summary>❓ 객체지향 프로그래밍(OOP)에 대해 설명해주세요.</summary>
 <div markdown="1">
+
 우리가 실생활에서 쓰는 모든 것을 객체라 하며,객체 지향 프로그래밍은 프로그램 구현에 필요한 객체를 파악하고 상태와 행위를 가진 객체를 만들고 각각의 객체들의 역할이 무엇인지를 정의하여 객체들 간의 상호작용을 통해 프로그램을 만드는 것을 말합니다.<br><br>
 즉, 기능이 아닌 <b>객체가 중심</b>이며, <b>"누가 어떤 일을 할 것인가?"</b> 가 핵심
 
@@ -75,8 +77,9 @@ JVM은 스택 기반으로 동작하며, Java Byte Code를 OS에 맞게 해석 �
 <details>
 <summary>❓ try-with-resources에 대해 설명해주세요.</summary>
 <div markdown="1">
-- try-with-resources는 try-catch-finally의 문제점을 보완하기 위해 나온 개념입니다.<br>
-- try( ... ) 안에 자원 객체를 전달하면, try블록이 끝나고 자동으로 자원 해제 해주는 기능을 말합니다.<br>
+
+- try-with-resources는 try-catch-finally의 문제점을 보완하기 위해 나온 개념입니다.
+- try( ... ) 안에 자원 객체를 전달하면, try블록이 끝나고 자동으로 자원 해제 해주는 기능을 말합니다.
 - 따로 finally 구문이나 모든 catch 구문에 종료 처리를 하지 않아도 되는 장점이 있습니다.
 
 </div>
@@ -84,14 +87,15 @@ JVM은 스택 기반으로 동작하며, Java Byte Code를 OS에 맞게 해석 �
 
 <details>
   <summary>❓ 불변 객체가 무엇인지 설명하고 대표적인 Java의 예시를 설명해주세요.</summary>
-  
+  <div markdown="1">
+
   - 불변 객체는 객체 생성 이후 내부의 상태가 변하지 않는 객체를 말합니다.
   - Java에서는 필드가 원시 타입인 경우 `final` 키워드를 사용해 불변 객체를 만들 수 있고,
   - 참조 타입일 경우엔 추가적인 작업이 필요하다.
 
   <details>
     <summary>❓ 참조 타입일 경우 추가적인 작업은 어떤게 있는지 설명해주세요.</summary>
-    
+
     - 참조 타입은 대표적으로 다음을 참조할 수 있다.
       - 1) 객체 : 객체를 사용하는 필드의 참조 변수도 불변 객체로 변경해야 한다.
       - 2) 배열 : 배열을 받아 copy해서 저장하고, getter를 clone으로 반환하도록 하면 된다.
@@ -99,5 +103,60 @@ JVM은 스택 기반으로 동작하며, Java Byte Code를 OS에 맞게 해석 �
         - 때문에 clone을 반환해 외부에서 값을 변경 못하게 한다.
       - 3) List 등 : 배열과 마찬가지로 생성시 새로운 list를 만들어 값을 복사하도록 한다.
         - 배열과 리스트는 내부를 복사하여 전달하는데, 이를 방어적 복사(defensive-copy)라고 한다.
+
   </details>
+  </div>
+</details>
+
+
+<details>
+<summary>❓ 불변 객체나 final을 굳이 사용해야 하는 이유가 무엇인가요?</summary>
+<div markdown="1">
+
+- Thread-Safe 하여 병렬 프로그래밍에 유용하며, 동기화를 고려하지 않아도 된다.
+    - 공유 자원이 불변이기 때문에 항상 동일한 값을 반환하기 때문
+- 실패 원자적인 메소드를 만들 수 있다.
+    - 어떠한 예외가 발생되더라도 메소드 호출 전의 상태를 유지할 수 있어 예외 발생 전과
+    똑같은 상태도 다음 로직 처리 가능
+- 부수효과를 피해 오류를 최소화 할 수 있다.
+    
+    * 부수효과 : 변수의 값이 바뀌거나 객체의 필드 값을 설정하거나 예외나 오류가 발생하여 
+    실행이 중단되는 현상
+    
+- 메소드 호출 시 파라미터 값이 변하지 않는다는 것을 보장할 수 있다.
+- 가비지 컬렉션 성능을 높일 수 있다.
+    - 가비지 컬렉터가 스캔하는 객체의 수가 줄기 때문에 (GC 수행 시 지연시간도 줄어든다)
+</div>
+</details>
+
+<details>
+<summary>❓ <span style="color: #ff0000">추상 클래스</span>와 <span style="color: #0080ff">일반 클래스</span>의 차이점이 무엇인가요?</summary>
+<div markdown="1">
+
+<b>객체화 가능 여부 <br>
+<span style="color: #ff0000">추상 클래스</span> <span style="color: #ff6666">불가</span><br>
+<span style="color: #0080ff">일반 클래스</span> <span style="color: #66b2ff"> 가능</span>
+
+
+</div>
+</details>
+
+<details>
+<summary>❓ <span style="color: #ff0000">추상 클래스</span>와 <span style="color: #0080ff">인터페이스</span>를 설명해주시고, 차이에 대해 설명해주세요.</summary>
+<div markdown="1">
+<span style="color: #ff0000"></span>
+
+- <span style="color: #ff0000">추상클래스</span>는 클래스 내 추상 메소드가 하나 이상 포함되거나 <span style="color: #ff6666">abstract</span>로 정의된 경우를 말하고,
+- <span style="color: #0080ff">인터페이스</span>는 모든 메소드가 추상 메서드로만 이루어져 있는 것을 말한다.
+- <span style="color: #00CC66">공통점</span>
+    - new 연산자로 인스턴스 생성 불가능
+    - 사용하기 위해서는 하위 클래스에서 확장/구현해야 한다.
+- <span style="color: #ffff00">차이점</span>
+    - <span style="color: #0080ff">인터페이스</span>는 그 인터페이스를 구현하는 모든 클래스에 대해 특정한 메소드가 반드시 존재하도록 강제함에 있고,
+    - <span style="color: #ff0000">추상 클래스</span>는 상속받는 클래스들의 공통적인 로직을 추상화 시키고, 기능 확장을 위해 사용한다.
+    - <span style="color: #ff0000">추상 클래스</span>는 <b>다중상속</b>이 <span style="color: #ff6666">불가능</span> 하지만, <span style="color: #0080ff">인터페이스</span>는 <b>다중상속</b>이 <span style="color: #66b2ff"> 가능</span>하다.
+- 추상 클래스 : 클래스, 필드값 설정/메소드 내부 코딩 가능
+- 인터페이스 : 클래스 X, 필드값 설정 불가(상수만 가능), 메소드 이름만 지정 가능
+  
+</div>
 </details>
