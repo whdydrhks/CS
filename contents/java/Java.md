@@ -206,3 +206,24 @@ GC의 작업을 수행하기 위해 **JVM이 어플리케이션의 실행을 잠
 
 </div>
 </details>
+
+<details>
+<summary>❓ 객체지향의 설계원칙에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+1. **SRP (Single responsibility principle)
+단일 책임 원칙** : 한 클래스는 하나의 책임만 가져야 한다.
+2. **OCP (Open-closed principle)
+개방 폐쇄 원칙** : 확장에는 열려있고, 수정에는 닫혀있어야 한다.
+3. **LSP (Liskov substitution principle)
+리스코프 치환 원칙** : 하위 타입은 항상 상위 타입을 대체 할 수 있어야 한다.
+4. **ISP (Interface segregation principle)
+인터페이스 분리 원칙** : 인터페이스 내에 메소드는 최소한 일수록 좋다. 
+(하나의 일반적인 인터페이스보다 여러 개의 구체적인 인터페이스가 낫다.)
+SRP와 같은 문제에 대한 두 가지 다른 해결책이다.
+5. **DIP (Dependency inversion principle)
+의존관계 역전 원칙** : 구체적인 클래스보다 상위 클래스, 인터페이스, 추상클래스와 같이 변하지 않을 가능성이 높은 클래스와 관계를 맺어라.
+DIP 원칙을 따르는 가장 인기 있는 방법은 의존성 주입(DI)이다.
+
+</div>
+</details>
