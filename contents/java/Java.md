@@ -193,3 +193,16 @@ JVM은 스택 기반으로 동작하며, Java Byte Code를 OS에 맞게 해석 �
 
 </div>
 </details>
+
+<details>
+<summary>❓ 가비지 컬렉션 과정에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+GC의 작업을 수행하기 위해 **JVM이 어플리케이션의 실행을 잠시 멈추고, GC를 실행하는 쓰레드를 제외한 모든 쓰레드들의 작업을 중단 후 (Stop The World 과정)** 
+
+**사용하지 않는 메모리를 제거-Mark and Sweep 과정**하고 작업이 재개됩니다.
+
+++GC의 작업은 Young 영역에 대한 Minor GC와 Old 영역에 대한 Major GC로 구분됩니다.
+
+</div>
+</details>
