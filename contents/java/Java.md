@@ -291,3 +291,16 @@ GC의 작업을 수행하기 위해 **JVM이 어플리케이션의 실행을 잠
 
 </div>
 </details>
+
+<details>
+<summary>❓ Wrapper Class란 무엇이며, Boxing과 UnBoxing은 무엇인지 설명해주세요.</summary>
+<div markdown="1">
+
+- **기본 자료형(Primitive data type)** 에 대한 ***객체 표현***을 **Wrapper class** 라고 한다.
+- 기본 자료형 ➡️ Wrapper class로 변환하는 것을 **Boxing** 이라 하며,
+- Wrapper class ➡️ 기본 자료형으로 변환하는 것을 **UnBoxing** 이라 한다.
+- Ex) 기본 자료형: byte, char, int, float, double, boolean
+- Wrapper: Byte, Character, Integer, Float, Double, Boolean
+
+</div>
+</details>
