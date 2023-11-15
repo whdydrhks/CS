@@ -304,3 +304,14 @@ GC의 작업을 수행하기 위해 **JVM이 어플리케이션의 실행을 잠
 
 </div>
 </details>
+
+<details>
+<summary>❓ Synchronized에 대해 아는 대로 말해주세요.</summary>
+<div markdown="1">
+
+- 여러 개의 쓰레드가 한 개의 자원을 사용하고자 할 때, 현재 데이터를 사용하고 있는 쓰레드를 제외하고 나머지 쓰레드들은 데이터에 접근할 수 없게 막는 개념입니다.
+- 데이터의 thread-safe를 하기 위해 자바에서 Synchronized 키워드를 제공해 멀티 쓰레드 환경에서 쓰레드간 동기화를 시켜 데이터의 thread-safe를 보장합니다.
+- Synchronized는 변수와 메소드에 사용해서 동기화 할 수 있으며, Synchronized 키워드를 남발하게 되면 오히려 프로그램의 성능저하를 일으킬 수 있습니다.
+
+</div>
+</details>
