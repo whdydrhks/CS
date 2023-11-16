@@ -315,3 +315,13 @@ GC의 작업을 수행하기 위해 **JVM이 어플리케이션의 실행을 잠
 
 </div>
 </details>
+
+<details>
+<summary>❓ new String( ) 과 리터럴(””)의 차이에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+- new String( )은 new 키워드로 새로운 객체를 생성하기 때문에 **Heap 메모리** 영역에 저장되고,
+- “”는 Heap 안에 있는 **String Constant Pool 영역**에 저장됩니다.
+
+</div>
+</details>
