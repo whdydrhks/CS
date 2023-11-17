@@ -325,3 +325,28 @@ GC의 작업을 수행하기 위해 **JVM이 어플리케이션의 실행을 잠
 
 </div>
 </details>
+
+<details>
+<summary>❓ String, StringBuffer, StringBuilder의 차이를 설명해주세요.</summary>
+<div markdown="1">
+
+- **String**은 **불변의 속성**을 가지며, **StringBuffer**와 **StringBuilder**는 **가변의 속성**을 가집니다.
+    - String str = “hello”;
+        - Heap 영역에 생성이 된다.
+        - str+=” world!” 와 같이 수정이 생길 경우,
+        - 새로운 String Constant Pool (”hello world!”) 를 가리키게 되고, 
+        기존의 “hello”는 GC가 처리하게 된다.
+    - 즉, 수정, 삭제가 빈번할 경우, String은 좋은 성능을 내지 못한다.
+- **StringBuffer**는 **동기화를 지원하여 멀티 쓰레드 환경에서 주로 사용**하며,
+- **StringBuilder**는 **동기화를 지원하지 않아 싱글 쓰레드 환경에서 주로 사용**합니다.
+- 결론, **단순히 성능만 놓고 본다면 연산이 많은 경우**
+    - **StringBuilder  >  StringBuffer  >>>  String**
+    
+    **String**   :  문자열  연산이  적고  멀티쓰레드  환경일  경우
+    
+    **StringBuffer**   :   문자열  연산이  많고  멀티쓰레드  환경일  경우
+    
+    **StringBuilder**   :   문자열  연산이  많고  단일쓰레드이거나  동기화를  고려하지  않아도  되는  경우
+
+</div>
+</details>
