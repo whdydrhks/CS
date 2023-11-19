@@ -296,7 +296,7 @@ GC의 작업을 수행하기 위해 **JVM이 어플리케이션의 실행을 잠
 <summary>❓ Wrapper Class란 무엇이며, Boxing과 UnBoxing은 무엇인지 설명해주세요.</summary>
 <div markdown="1">
 
-- **기본 자료형(Primitive data type)** 에 대한 ***객체 표현***을 **Wrapper class** 라고 한다.
+- **기본 자료형(Primitive data type)** 에 대한 **_객체 표현_**을 **Wrapper class** 라고 한다.
 - 기본 자료형 ➡️ Wrapper class로 변환하는 것을 **Boxing** 이라 하며,
 - Wrapper class ➡️ 기본 자료형으로 변환하는 것을 **UnBoxing** 이라 한다.
 - Ex) 기본 자료형: byte, char, int, float, double, boolean
@@ -331,22 +331,38 @@ GC의 작업을 수행하기 위해 **JVM이 어플리케이션의 실행을 잠
 <div markdown="1">
 
 - **String**은 **불변의 속성**을 가지며, **StringBuffer**와 **StringBuilder**는 **가변의 속성**을 가집니다.
-    - String str = “hello”;
-        - Heap 영역에 생성이 된다.
-        - str+=” world!” 와 같이 수정이 생길 경우,
-        - 새로운 String Constant Pool (”hello world!”) 를 가리키게 되고, 
-        기존의 “hello”는 GC가 처리하게 된다.
-    - 즉, 수정, 삭제가 빈번할 경우, String은 좋은 성능을 내지 못한다.
+  - String str = “hello”;
+    - Heap 영역에 생성이 된다.
+    - str+=” world!” 와 같이 수정이 생길 경우,
+    - 새로운 String Constant Pool (”hello world!”) 를 가리키게 되고,
+      기존의 “hello”는 GC가 처리하게 된다.
+  - 즉, 수정, 삭제가 빈번할 경우, String은 좋은 성능을 내지 못한다.
 - **StringBuffer**는 **동기화를 지원하여 멀티 쓰레드 환경에서 주로 사용**하며,
 - **StringBuilder**는 **동기화를 지원하지 않아 싱글 쓰레드 환경에서 주로 사용**합니다.
 - 결론, **단순히 성능만 놓고 본다면 연산이 많은 경우**
-    - **StringBuilder  >  StringBuffer  >>>  String**
-    
+  - **StringBuilder  >  StringBuffer  >>>  String**
     **String**   :  문자열  연산이  적고  멀티쓰레드  환경일  경우
-    
     **StringBuffer**   :   문자열  연산이  많고  멀티쓰레드  환경일  경우
-    
     **StringBuilder**   :   문자열  연산이  많고  단일쓰레드이거나  동기화를  고려하지  않아도  되는  경우
+
+</div>
+</details>
+
+<details>
+<summary>❓ String 객체가 불변인 이유에 대해 아는대로 설명해주세요.</summary>
+<div markdown="1">
+
+1. **캐싱 기능에 의한 메모리 절약과 속도 향상**
+
+- Java에서 String 객체들은 Heap의 String Pool 이라는 공간에 저장되는데, 참조하려는 문자열이 String Pool에 존재하는 경우 새로 생성하지 않고 Pool에 있는 객체를 사용하기 때문에 특정 문자열 값을 재사용하는 빈도가 높을수록 상당한 성능 향상을 기대할 수 있다.
+
+2. **Thread-Safe**
+
+- String 객체는 불변이기 때문에 여러 쓰레드에서 동시에 특정 String 객체를 참조하더라도 안전하다.
+
+3. **보안기능**
+
+- 중요한 데이터를 문자열로 다루는 경우 강제로 해당 참조에 대한 문자열 값을 바꾸는 것이 불가능하기 때문에 보안에 유리하다.
 
 </div>
 </details>
