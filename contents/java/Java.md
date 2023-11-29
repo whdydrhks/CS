@@ -447,3 +447,12 @@ GC의 작업을 수행하기 위해 **JVM이 어플리케이션의 실행을 잠
 
 </div>
 </details>
+
+<details>
+<summary>❓ 리플렉션(Reflection) 이란 무엇인지 설명해주세요.</summary>
+<div markdown="1">
+
+리플렉션이란 구체적인 클래스 타입을 알지 못해도 그 클래스의 메소드, 타입, 변수들에 접근할 수 있도록 해주는 자바 API 이다.
+
+</div>
+</details>
