@@ -480,3 +480,16 @@ IntelliJ의 자동완성 기능, 스프링의 어노테이션이 리플렉션을
 
 </div>
 </details>
+
+<details>
+<summary>❓ CheckedException과 UnCheckedException의 차이를 설명해주세요.</summary>
+<div markdown="1">
+
+- CheckedException은 실행하기 전에 예측 가능한 예외를 말하고, 반드시 예외 처리를 해야 합니다.
+    - 대표적인 Exception - IOException, ClassNotFoundException 등
+- UncheckedException은 실행되고 난 후에 알 수 있는 예외를 말하고, 따로 예외처리를 하지 않아도 됩니다.
+    - 대표적인 Exception - NullPointerException, ArrayIndexOutOfBoundsException 등
+- RuntimeException은 UncehckedException을 상속한 클래스이고,
+RuntimeException이 아닌 것은 CheckedException을 상속한 클래스이다.
+</div>
+</details>
