@@ -507,3 +507,32 @@ NPE를 피하려면 null 여부 검사를 필연적으로 하게 되는데, 만�
 Optional 클래스의 메소드를 통해 null을 컨트롤 할 수 있다.
 </div>
 </details>
+
+<details>
+<summary>❓ 컬렉션(Collection) 프레임워크에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+- 다수의 데이터를 쉽고 효과적으로 관리할 수 있는 표준화된 방법을 제공하는 클래스의 집합을 의미한다.
+- 자바 컬렉션에는 List, Set, Map 인테페이스를 기준으로 여러 구현체가 존재하고,
+- 이에 더해 Stack, Queue 인터페이스도 존재한다.
+
+- Collection
+  - List
+    - ArrayList
+    - Vector
+    - LinkedList
+  - Set
+    - HashSset
+    - TreeSet
+  
+  - Map
+    - HashMap
+    - HashTable
+    - TreeMap
+
+  - Stack
+  - Queue
+
+
+</div>
+</details>
