@@ -536,3 +536,23 @@ Optional 클래스의 메소드를 통해 null을 컨트롤 할 수 있다.
 
 </div>
 </details>
+
+<details>
+<summary>❓ List, Set, Map, Stack, Queue의 특징에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+- List는 순서가 있는 데이터의 집합이며, 데이터의 중복을 허용한다.
+대표적인 구현체로는 ArrayList가 있고, 이는 Vector를 개선한 것이다.
+이외에도 LinkedList 등의 구현체가 있다.
+    - Vector, ArrayList, LinkedList, Stack, Queue
+- Set은 순서가 없는 데이터의 집합이며, 데이터의 중복을 허용하지 않는다.
+대표적인 구현체로는 HashSet이 있고, 순서를 보장하기 위해서는 LinkedHashSet을 사용한다.
+(Map의 key-value 구조에서 key 대신 value가 들어가 value를 key로 하는 자료구조)
+    - HashSet, LinkedHashSet, TreeSet
+- Map은 키와 값이 한 쌍으로 이뤄져 있고, 키를 기준으로 중복을 허용하지 않으며, 순서가 없다. key의 순서를 보장하기 위해서는 LinkedHashMap을 사용한다.
+    - HashMap, TreeMap, HashTable, Properties
+- Stack 객체는 직접 new 키워드로 사용할 수 있으며, Queue 인터페이스는 LinkedList에 new 키워드를 적용해 사용할 수 있다.
+
+
+</div>
+</details>
