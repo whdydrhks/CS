@@ -556,3 +556,17 @@ Optional 클래스의 메소드를 통해 null을 컨트롤 할 수 있다.
 
 </div>
 </details>
+
+<details>
+<summary>❓ Set과 Map의 타입이 Wrapper Class 가 아닌 Object를 받을 때 중복 검사는 어떻게 할건지 설명해주세요.</summary>
+<div markdown="1">
+
+hashCode( ) 메소드를 오버라이딩하여 리턴된 해시코드 값이 같은지를 보고 해시코드 값이 다르다면 다른 객체로 판단하고, 
+해시코드 값이 같으면 equals( ) 메소드를 오버라이딩하여 다시 비교한다.
+이 두 개가 모두 맞으면 중복 객체이다. 
+
+( ✅ hashCode( ), equals( ) 모두 같으면 중복! )
+
+
+</div>
+</details>
