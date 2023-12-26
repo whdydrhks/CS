@@ -471,12 +471,11 @@ IntelliJ의 자동완성 기능, 스프링의 어노테이션이 리플렉션을
 </details>
 
 <details>
-<summary>❓ Error와 Exception 의 차이를 설명해주세요.</summary>
+<summary>❓ treeset과 hashset의 차이는 무엇인가요.</summary>
 <div markdown="1">
 
-- Error는 실행 중 일어날 수 있는 치명적 오류를 말합니다.
-  컴파일 시점에 체크할 수 없고, 오류가 발생하면 프로그램은 비정상 종료되며 예측 불가능한 UncheckedException에 속합니다.
-- 반면, Exception은 Error 보다 비교적 경미한 오류이며, try-catch를 이용해 프로그램의 비정상 종료를 막을 수 있습니다.
+- treeset : 하나의 형만 저장 가능
+- hashset : 다른 형 저장 가능
 
 </div>
 </details>
@@ -566,6 +565,31 @@ hashCode( ) 메소드를 오버라이딩하여 리턴된 해시코드 값이 같
 이 두 개가 모두 맞으면 중복 객체이다. 
 
 ( ✅ hashCode( ), equals( ) 모두 같으면 중복! )
+
+
+</div>
+</details>
+
+<details>
+<summary>❓ Set과 Map의 타입이 Wrapper Class 가 아닌 Object를 받을 때 중복 검사는 어떻게 할건지 설명해주세요.</summary>
+<div markdown="1">
+
+hashCode( ) 메소드를 오버라이딩하여 리턴된 해시코드 값이 같은지를 보고 해시코드 값이 다르다면 다른 객체로 판단하고, 
+해시코드 값이 같으면 equals( ) 메소드를 오버라이딩하여 다시 비교한다.
+이 두 개가 모두 맞으면 중복 객체이다. 
+
+( ✅ hashCode( ), equals( ) 모두 같으면 중복! )
+
+
+</div>
+</details>
+
+<details>
+<summary>❓ treeset과 hashset의 차이는 무엇인가요.</summary>
+<div markdown="1">
+
+- treeset : 하나의 형만 저장 가능
+- hashset : 다른 형 저장 가능
 
 
 </div>
