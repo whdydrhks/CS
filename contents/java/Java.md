@@ -485,9 +485,9 @@ IntelliJ의 자동완성 기능, 스프링의 어노테이션이 리플렉션을
 <div markdown="1">
 
 - CheckedException은 실행하기 전에 예측 가능한 예외를 말하고, 반드시 예외 처리를 해야 합니다.
-    - 대표적인 Exception - IOException, ClassNotFoundException 등
+  - 대표적인 Exception - IOException, ClassNotFoundException 등
 - UncheckedException은 실행되고 난 후에 알 수 있는 예외를 말하고, 따로 예외처리를 하지 않아도 됩니다.
-    - 대표적인 Exception - NullPointerException, ArrayIndexOutOfBoundsException 등
+  - 대표적인 Exception - NullPointerException, ArrayIndexOutOfBoundsException 등
 - RuntimeException은 UncehckedException을 상속한 클래스이고,
 RuntimeException이 아닌 것은 CheckedException을 상속한 클래스이다.
 </div>
@@ -504,6 +504,7 @@ NPE를 피하려면 null 여부 검사를 필연적으로 하게 되는데, 만�
 하지만 Java8 부터 Optional<T>을 제공하여 null로 인한 예외가 발생하지 않도록 도와주고,
 
 Optional 클래스의 메소드를 통해 null을 컨트롤 할 수 있다.
+
 </div>
 </details>
 
@@ -516,22 +517,24 @@ Optional 클래스의 메소드를 통해 null을 컨트롤 할 수 있다.
 - 이에 더해 Stack, Queue 인터페이스도 존재한다.
 
 - Collection
+
   - List
     - ArrayList
     - Vector
     - LinkedList
   - Set
+
     - HashSset
     - TreeSet
-  
+
   - Map
+
     - HashMap
     - HashTable
     - TreeMap
 
   - Stack
   - Queue
-
 
 </div>
 </details>
@@ -541,17 +544,27 @@ Optional 클래스의 메소드를 통해 null을 컨트롤 할 수 있다.
 <div markdown="1">
 
 - List는 순서가 있는 데이터의 집합이며, 데이터의 중복을 허용한다.
-대표적인 구현체로는 ArrayList가 있고, 이는 Vector를 개선한 것이다.
-이외에도 LinkedList 등의 구현체가 있다.
-    - Vector, ArrayList, LinkedList, Stack, Queue
+  대표적인 구현체로는 ArrayList가 있고, 이는 Vector를 개선한 것이다.
+  이외에도 LinkedList 등의 구현체가 있다. - Vector, ArrayList, LinkedList, Stack, Queue
 - Set은 순서가 없는 데이터의 집합이며, 데이터의 중복을 허용하지 않는다.
-대표적인 구현체로는 HashSet이 있고, 순서를 보장하기 위해서는 LinkedHashSet을 사용한다.
-(Map의 key-value 구조에서 key 대신 value가 들어가 value를 key로 하는 자료구조)
-    - HashSet, LinkedHashSet, TreeSet
+  대표적인 구현체로는 HashSet이 있고, 순서를 보장하기 위해서는 LinkedHashSet을 사용한다.
+  (Map의 key-value 구조에서 key 대신 value가 들어가 value를 key로 하는 자료구조) - HashSet, LinkedHashSet, TreeSet
 - Map은 키와 값이 한 쌍으로 이뤄져 있고, 키를 기준으로 중복을 허용하지 않으며, 순서가 없다. key의 순서를 보장하기 위해서는 LinkedHashMap을 사용한다.
-    - HashMap, TreeMap, HashTable, Properties
+  - HashMap, TreeMap, HashTable, Properties
 - Stack 객체는 직접 new 키워드로 사용할 수 있으며, Queue 인터페이스는 LinkedList에 new 키워드를 적용해 사용할 수 있다.
 
+</div>
+</details>
+
+<details>
+<summary>❓ Set과 Map의 타입이 Wrapper Class 가 아닌 Object를 받을 때 중복 검사는 어떻게 할건지 설명해주세요.</summary>
+<div markdown="1">
+
+hashCode( ) 메소드를 오버라이딩하여 리턴된 해시코드 값이 같은지를 보고 해시코드 값이 다르다면 다른 객체로 판단하고,
+해시코드 값이 같으면 equals( ) 메소드를 오버라이딩하여 다시 비교한다.
+이 두 개가 모두 맞으면 중복 객체이다.
+
+( ✅ hashCode( ), equals( ) 모두 같으면 중복! )
 
 </div>
 </details>
@@ -560,26 +573,11 @@ Optional 클래스의 메소드를 통해 null을 컨트롤 할 수 있다.
 <summary>❓ Set과 Map의 타입이 Wrapper Class 가 아닌 Object를 받을 때 중복 검사는 어떻게 할건지 설명해주세요.</summary>
 <div markdown="1">
 
-hashCode( ) 메소드를 오버라이딩하여 리턴된 해시코드 값이 같은지를 보고 해시코드 값이 다르다면 다른 객체로 판단하고, 
+hashCode( ) 메소드를 오버라이딩하여 리턴된 해시코드 값이 같은지를 보고 해시코드 값이 다르다면 다른 객체로 판단하고,
 해시코드 값이 같으면 equals( ) 메소드를 오버라이딩하여 다시 비교한다.
-이 두 개가 모두 맞으면 중복 객체이다. 
+이 두 개가 모두 맞으면 중복 객체이다.
 
 ( ✅ hashCode( ), equals( ) 모두 같으면 중복! )
-
-
-</div>
-</details>
-
-<details>
-<summary>❓ Set과 Map의 타입이 Wrapper Class 가 아닌 Object를 받을 때 중복 검사는 어떻게 할건지 설명해주세요.</summary>
-<div markdown="1">
-
-hashCode( ) 메소드를 오버라이딩하여 리턴된 해시코드 값이 같은지를 보고 해시코드 값이 다르다면 다른 객체로 판단하고, 
-해시코드 값이 같으면 equals( ) 메소드를 오버라이딩하여 다시 비교한다.
-이 두 개가 모두 맞으면 중복 객체이다. 
-
-( ✅ hashCode( ), equals( ) 모두 같으면 중복! )
-
 
 </div>
 </details>
@@ -591,6 +589,15 @@ hashCode( ) 메소드를 오버라이딩하여 리턴된 해시코드 값이 같
 - treeset : 하나의 형만 저장 가능
 - hashset : 다른 형 저장 가능
 
+</div>
+</details>
+
+<details>
+<summary>❓ treemap과 hashmap의 차이는 무엇인가요.</summary>
+<div markdown="1">
+
+- treemap : key는 이진탐색트리, key는 null 허용 X
+- hashmap : key null 값 1번 허용
 
 </div>
 </details>
