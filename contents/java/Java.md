@@ -661,3 +661,13 @@ GC가 지연되면서 OOME(Out Of Memory Exception)이 발생할 수 있기 때�
   
 </div>
 </details>
+
+<details>
+<summary>❓ SerialVersionUID 를 선언해야 하는 이유에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+- JVM은 직렬화와 역직렬화를 하는 시점의 클래스에 대한 버전 번호를 부여하는데, 만약 그 시점에 클래스의 정의가 바뀌어 있다면 새로운 버전 번호를 할당하게 됩니다. 그래서 직렬화할 때의 버전 번호와 역직렬화를 할 때의 버전 번호가 다르면 역직렬화가 불가능하게 될 수 있기 때문에 이런 문제를 해결하기 위해 SerialVersionUID를 사용합니다.
+- 만약 직렬화할 때 사용한 SerialVersionUID의 값과 역직렬화 하기 위해 사용했던 SVUID가 다르다면 InvalidClassException이 발생할 수 있다.
+  
+</div>
+</details>
