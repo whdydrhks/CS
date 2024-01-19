@@ -15,3 +15,23 @@
 
 </div>
 </details>
+
+<details>
+<summary>❓ 데이터베이스 언어(DDL, DML, DCL)에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+**DDL (정의어: Data Definition Language)**<br>
+테이블
+데이터베이스 구조를 정의, 수정, 삭제하는 언어<br>- create, alter, drop
+
+**DML (조작어: Data Manipulation Language)**<br>
+테이블 내 컬럼
+데이터베이스내의 자료 검색, 삽입, 갱신, 삭제를 위한 언어<br> - insert, select, update, delete
+
+**DCL (제어어: Data Control Language)**<br>
+권한
+데이터에 대해 무결성 유지, 병행 수행 제어, 보호와 관리를 위한 언어<br>- commit, rollback, grant, revoke
+
+
+</div>
+</details>
