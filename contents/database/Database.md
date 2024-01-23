@@ -56,3 +56,13 @@ JOIN: JOIN이 실행되어 데이터가 SET으로 모아지게 된다. 서브쿼
 
 </div>
 </details>
+
+<details>
+<summary>❓ 트리거(Trigger)에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+- 트리거는 특정 테이블에 대한 이벤트에 반응해 INSERT, DELETE, UPDATE 같은 DML 문이 수행되었을 때, 데이터베이스에서 자동으로 동작하도록 작성된 프로그램입니다.
+- 사용자가 직접 호출하는 것이 아닌, 데이터베이스에서 자동적으로 호출한다는 것이 가장 큰 특징입니다.
+
+</div>
+</details>
