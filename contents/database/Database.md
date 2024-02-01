@@ -179,3 +179,14 @@ JOIN: JOIN이 실행되어 데이터가 SET으로 모아지게 된다. 서브쿼
 
 </div>
 </details>
+
+<details>
+<summary>❓ SQL Injection이 무엇인지 설명해주세요.</summary>
+<div markdown="1">
+
+SQL Injection이란 공격자가 악의적인 의도로 갖는 SQL 구문을 삽입하여 
+
+데이터베이스를 비정상적으로 조작하는 코드 인젝션 공격 기법입니다.
+
+</div>
+</details>
