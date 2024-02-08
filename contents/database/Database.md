@@ -255,3 +255,15 @@ SQL Injection이란 공격자가 악의적인 의도로 갖는 SQL 구문을 삽
 
 </div>
 </details>
+
+<details>
+<summary>❓ 트랜잭션의 특성(ACID)에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+1. 원자성(Atomicity): 작업이 모두 반영되던지 아니면 전혀 반영되지 않아야 한다.
+2. 일관성(Consistency): 실행이 완료되면 언제나 일관성 있는 상태를 유지해야 한다.
+3. 독립성(Isolation): 둘 이상 트랜잭션이 동시에 실행될 경우 서로의 연산에 끼어들 수 없다.
+4. 영속성(Durability): 완료된 결과는 영구적으로 반영되어야 한다.
+
+</div>
+</details>
