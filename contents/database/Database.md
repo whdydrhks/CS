@@ -267,3 +267,14 @@ SQL Injection이란 공격자가 악의적인 의도로 갖는 SQL 구문을 삽
 
 </div>
 </details>
+
+<details>
+<summary>❓ DB 락에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+- DB Lock은 트랜잭션 처리의 순차성을 보장하기 위한 방법입니다.
+- **공유락(Shared Lock)**: **Read Lock**라고도 하는 공유락은 트랜잭션이 읽기를 할 때 사용하는 락이며, 데이터를 읽기만 하기 때문에 같은 공유락끼리는 동시에 접근이 가능합니다.
+- **배타락(Exclusive Lock)**: **Write Lock**라고도 하는 배타락은 데이터를 변경할 때 사용하는 락입니다. 트랜잭션이 완료될 때까지 유지되며, 배타락이 끝나기 전까지 어떠한 접근도 허용하지 않습니다.
+
+</div>
+</details>
