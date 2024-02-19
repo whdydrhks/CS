@@ -325,3 +325,21 @@ Full-Text: 이미지, CSS, 글 등의 복합적으로 이뤄진 컨텐츠에서 
 
 </div>
 </details>
+
+<details>
+<summary>❓ Inner Join과 Outer Join의 차이를 설명해주세요.</summary>
+<div markdown="1">
+
+**Inner Join**은 서로 연관된 내용만 검색하는 조인 방법입니다.
+
+A와 B에 대해 수행하는 것은, A와 B의 교집합을 말합니다. 벤다이어그램으로 그렸을 때, 교차되는 부분.
+
+**Outer Join**은 한 쪽에는 데이터가 있고 한 쪽에는 데이터가 없는 경우, 데이터가 있는 쪽의 내용을 전부 출력하는 방법입니다.
+
+A와 B에 대해 수행하는 것은, A와 B의 합집합을 말한다. 벤다이어그램으로 그렸을 때 합집합 부분.
+
+outer join에는 LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTER JOIN이 있습니다.
+![sql_join](https://github.com/whdydrhks/CS/assets/109534450/3592e3d5-e4db-40c6-82ef-21ca5a9751b6)
+
+</div>
+</details>
