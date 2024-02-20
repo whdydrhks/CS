@@ -343,3 +343,16 @@ outer join에는 LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTER JOIN이 있습니
 
 </div>
 </details>
+
+<details>
+<summary>❓ Group By의 역할에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+Group By는 해당 명령어를 통해 특정 컬럼을 기준으로 연산한 결과를 집계 키로 정의하여 그룹을 짓는 역할을 합니다. 
+
+집합 연산자는 COUNT, SUM, AVG, MAX, MIN 등이 있고,
+
+DISTINCT 와 같이 중복 데이터를 제거하는 특징이 있습니다.
+
+</div>
+</details>
