@@ -406,3 +406,22 @@ DISTINCT 와 같이 중복 데이터를 제거하는 특징이 있습니다.
 
 </div>
 </details>
+
+<details>
+<summary>❓ Having과 Where의 차이를 설명해주세요.</summary>
+<div markdown="1">
+
+Having은 그룹을 필터링 하는데 사용되고,
+
+Where은 개별 행을 필터링하는데 사용됩니다.
+
+집계 함수(COUNT, SUM, AVG, MAX, MIN 등)는 Having절과 함께 사용할 수 있으나,
+
+where 절은 사용할 수 없습니다. (집계 함수를 사용할 수 있는 Group by 절보다 Where절이 먼저 수행)
+
+Having은 그룹화 또는 집계가 발생한 후 필터링하는데 사용되고,
+
+where은 그룹화 또는 집계가 발생하기 전에 필터링하는데 사용됩니다.
+
+</div>
+</details>
