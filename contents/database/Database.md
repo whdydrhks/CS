@@ -425,3 +425,16 @@ where은 그룹화 또는 집계가 발생하기 전에 필터링하는데 사�
 
 </div>
 </details>
+
+<details>
+<summary>❓ Join에서 On과 Where의 차이를 설명해주세요.</summary>
+<div markdown="1">
+
+On이 Where 보다 먼저 실행되어 Join을 하기 전에 필터링을 하고 (=On 조건으로 필터링이 된 레코드들간 Join이 이뤄진다)
+
+Where은 Join을 한 후에 필터링을 합니다.
+
+(Join을 한 결과에서 Where 조건절로 필터링이 이뤄진다)
+
+</div>
+</details>
