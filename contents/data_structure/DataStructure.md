@@ -67,3 +67,56 @@ Heap은 최댓값 또는 최솟값을 찾아내는 연산을 쉽게 하기 위�
 
 </div>
 </details>
+
+<details>
+<summary>❓ Stack 클래스를 손코딩으로 구현해주세요.</summary>
+<div markdown="1">
+
+```java
+public class Stack {
+	private static int MAX_STACK_SIZE = 10;
+	private int top;
+	private int[] data = new int[MAX_STACK_SIZE];
+
+	public Stack() {
+		top = -1;
+	}
+
+	public void push(int data_) throws Exception {
+		if(isFull()) {
+			throw new Exception("스택이 가득 찼습니다.");
+		}
+		data[++top] = data_;
+	}
+
+	public int pop() throws Exception {
+		if(isEmpty()) {
+			throw new Exception("스택이 비었습니다.");
+		}
+		return data[top--];
+	}
+
+	public int peek() throws Exception {
+		if(isEmpty()) {
+			throw new Exception("스택이 비었습니다.");
+		}
+		return data[top];
+	}
+
+	public boolean isEmpty() {
+		return top == -1;
+	}
+
+	public boolean isFull() {
+		return top == MAX_STACK_SIZE -1;
+	}
+
+	public int size() {
+		return top+1;
+	}
+
+}
+```
+
+</div>
+</details>
