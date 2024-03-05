@@ -120,3 +120,13 @@ public class Stack {
 
 </div>
 </details>
+
+<details>
+<summary>❓ Priority Queue(우선순위 큐)에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+우선순위 큐는 들어간 순서에 상관없이 우선순위가 높은 데이터를 먼저 꺼내기 위해 고안된 자료구조입니다. 
+우선순위 큐 구현 방식에는 배열, 연결 리스트, 힙이 있고, 그 중 힙 방식이 worst case 라도 시간 복잡도 O(logN) 을 보장하기 때문에 일반적으로 완전 이진트리 형태의 힙을 이용해 구현합니다.
+
+</div>
+</details>
