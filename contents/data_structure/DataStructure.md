@@ -130,3 +130,16 @@ public class Stack {
 
 </div>
 </details>
+
+<details>
+<summary>❓ Array와 ArrayList의 차이점에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+Array는 크기가 고정적이고, ArrayList는 크기가 가변적입니다.
+
+Array는 초기화 시 메모리에 할당되어 ArrayList보다 속도가 빠르고,
+
+ArrayList는 데이터 추가 및 삭제 시 메모리를 재할당하기 때문에 속도가 Array보다 느립니다.
+
+</div>
+</details>
