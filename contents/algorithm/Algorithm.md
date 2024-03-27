@@ -29,3 +29,17 @@
 
 </div>
 </details>
+
+<details>
+<summary>❓ 버블 정렬(Bubble Sort)에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+버블 벙렬은 서로 인접한 두 원소를 비교하여 정렬하는 알고리즘입니다.
+
+0번 인덱스부터 n-1번 인덱스까지 n번까지의 모든 인덱스를 비교하며 정렬합니다.
+
+시간 복잡도는 O(n^2)입니다.
+![bubble](https://github.com/whdydrhks/CS/assets/109534450/c3d10eeb-f08c-4363-b565-2da91e1433dd)
+
+</div>
+</details>
