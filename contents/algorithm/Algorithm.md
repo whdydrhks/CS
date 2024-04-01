@@ -43,3 +43,18 @@
 
 </div>
 </details>
+
+<details>
+<summary>❓ 선택 정렬(Selection Sort)에 대해 설명해주세요.</summary>
+<div markdown="1">
+
+선택 정렬은 첫 번째 값을 두 번째부터 마지막 값까지 차례대로 비교하여 최솟값을 찾아 첫 번째에 놓고,
+
+두 번째 값을 세 번째부터 마지막 값까지 비교하여 최솟값을 찾아 두 번째 위치에 놓는 과정을 반복하며 정렬하는 알고리즘입니다.
+
+시간 복잡도는 O(n^2)입니다.
+![selection](https://github.com/whdydrhks/CS/assets/109534450/977e60e6-154f-438e-b696-b2c381076299)
+
+
+</div>
+</details>
